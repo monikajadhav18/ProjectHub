@@ -54,6 +54,7 @@ public static class DependencyInjection
         services.AddSingleton(TimeProvider.System);
         services.AddSingleton<IJwtTokenService, JwtTokenService>();
         services.AddScoped<IAuthService, AuthService>();
+        services.AddScoped<IUserDirectory, UserDirectory>();
 
         services.AddIdentityCore<ApplicationUser>(options =>
         {
@@ -75,7 +76,6 @@ public static class DependencyInjection
             .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
-                // Keep claim names exactly as they are in the token ("sub", "role") instead of remapping them.
                 options.MapInboundClaims = false;
 
                 options.TokenValidationParameters = new TokenValidationParameters
