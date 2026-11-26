@@ -19,12 +19,13 @@ public class ApplicationDbContext
 
     public DbSet<TaskItem> Tasks => Set<TaskItem>();
 
+    // Authentication plumbing: used only inside Infrastructure, so it isn't on IApplicationDbContext.
+    public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        // Must run first: it configures the Identity tables and their keys.
         base.OnModelCreating(builder);
 
-        // Finds every IEntityTypeConfiguration<T> class in this project.
         builder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
     }
 }
