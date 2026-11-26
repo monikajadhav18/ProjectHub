@@ -1,7 +1,46 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <Compile Include="obj\Debug\net10.0\.NETCoreApp,Version=v10.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net10.0\ProjectHub.Application.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net10.0\ProjectHub.Application.GlobalUsings.g.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net10.0\ProjectHub.Application.deps.json" />
+    <Content Include="obj\Debug\net10.0\ProjectHub.Application.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\net10.0\ProjectHub.Application.sourcelink.json" />
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\ProjectHub.Application.csproj.nuget.dgspec.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net10.0\ProjectHub.Application.dll" />
+    <None Include="bin\Debug\net10.0\ProjectHub.Application.pdb" />
+    <None Include="bin\Debug\net10.0\ProjectHub.Domain.dll" />
+    <None Include="bin\Debug\net10.0\ProjectHub.Domain.pdb" />
+    <None Include="obj\Debug\net10.0\ProjectH.533F2EFC.Up2Date" />
+    <None Include="obj\Debug\net10.0\ProjectHub.Application.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net10.0\ProjectHub.Application.assets.cache" />
+    <None Include="obj\Debug\net10.0\ProjectHub.Application.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net10.0\ProjectHub.Application.csproj.BuildWithSkipAnalyzers" />
+    <None Include="obj\Debug\net10.0\ProjectHub.Application.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net10.0\ProjectHub.Application.dll" />
+    <None Include="obj\Debug\net10.0\ProjectHub.Application.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net10.0\ProjectHub.Application.pdb" />
+    <None Include="obj\Debug\net10.0\refint\ProjectHub.Application.dll" />
+    <None Include="obj\Debug\net10.0\ref\ProjectHub.Application.dll" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\ProjectHub.Application.csproj.nuget.g.props" />
+    <None Include="obj\ProjectHub.Application.csproj.nuget.g.targets" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ProjectHub.Domain\ProjectHub.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.10" />
   </ItemGroup>
 
   <PropertyGroup>
